@@ -311,23 +311,22 @@
       </script>
     </section>
 
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Text Editor
 
-        * used to write and edit code
-        * preinstalled editors (Notepad / TextEdit) don't include many features
-        * paid and free options include features such as colour highlighting and plugins for improving workflow
-        * some great options: [Notepad++](http://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/) (untimed free trial), [Brackets](http://brackets.io) and [TextWrangler](http://www.barebones.com/products/textwrangler/).
-        [Atom](https://atom.io/)
+        <section class="slide" data-markdown>
+          <script type="text/template">
+            #Glitch
 
-        **[Glitch](https://glitch.com)** free and easy to collaborate together online!
+            * Free easy-to-use website that lets you build websites, apps and more using code.
+            * Allows for collaboration on a project!
+            * Highlights mistakes which helps make the coding experience easier.
+            * Go to https://glitch.com/
 
-        ---
-        ###Pro tip!
-        Improve your work flow with [keyboard shortcuts](http://canadalearningcode.ca/downloads/keyboard-shortcuts.pdf).
-      </script>
-    </section>
+            ![Glitch](framework/img/workshop/glitch.png)
+
+
+          </script>
+        </section>
+
 
     <section class="slide side-by-side" data-markdown>
       <script type="text/template">
@@ -451,11 +450,7 @@
         ![Sign in with email](framework/img/workshop/glitch-signin-with-email.png)
         ![Verification email](framework/img/workshop/glitch-verification.png)
 
-        <hr>
 
-        ###Offline Option: Open Atom + Add a Project Folder
-        ![New project folder](framework/img/workshop/atom-add-project.jpg)
-        ![Preview project starter files](framework/img/workshop/atom-starter.png)
 
 
       </script>
@@ -471,10 +466,6 @@
         1. Create a new project <br> ![Select New Project, then Hello-Webpage](framework/img/workshop/new-project.png)
         1. Change the name of your project <br> ![Rename](framework/img/workshop/rename.png)
 
-        <hr>
-
-        ###Offline Option: Skip this slide
-
       </script>
     </section>
 
@@ -489,18 +480,23 @@
         1. Select **Edit project**
         1. Request to join the project <br> ![Join](framework/img/workshop/join.png)
 
+
+
+      </script>
+    </section>
+    <section class="slide two-col-list" data-toc data-markdown>
+      <script type="text/template">
+        # Collaborating in Glitch
+
         **Pair 1:**
 
-        1. Add your team members
+        1.  Add your team members
           ![Click on bubble that says Can I Join?](framework/img/workshop/invite1.png)
         ![Click Invite to Edit](framework/img/workshop/invite2.png)
 
         **Do not rename index.html. This is our home page.**
 
 
-        <hr>
-
-        ###Offline Option: Skip this slide
 
       </script>
     </section>
@@ -508,15 +504,17 @@
     <!--Slide 37-->
     <section class="slide" data-toc data-markdown>
       <script type="text/template">
-        # Say 'Hello' to your team
+        # Say 'Hello' to your team through comments! 👋
 
-        Test it out! Open the **index.html** and type a message to your teammates.
+        This is a great way for you to communicate with your teammmates and explain what you're doing with your code.
 
-        ![Setting up glitch](framework/img/workshop/secret-msg.png)
+        The syntax for comments in HTML are
+        ```
+        <!-- THIS IS A COMMENT -->
+        ```
+        Try it out! Open the **index.html** and type a message to your teammates.
 
-        <hr>
-
-        ###Offline Option: Skip this slide
+        ![Writing a comment in Glitch](framework/img/workshop/writing-a-comment.png)
 
       </script>
     </section>
@@ -530,13 +528,6 @@
         1. In order to view changes as you go, select **Show Live**, then arrange the pages beside each other like the image below.
 
         ![Setting up glitch](framework/img/workshop/window-setup.png)
-
-        <hr>
-
-        ###Offline Option: Show index.html in File Manager
-        ###Open index.html in your browser (Double-click on file)
-        ![Right click and show in file manager](framework/img/workshop/show.png)
-
 
       </script>
     </section>
@@ -697,15 +688,17 @@
 
         For today, let's take a look at the final design to see how to group related elements and create a page structure.
 
-        ![final project](framework/img/workshop/final-project.jpg) <!-- .element: class="screenshot" -->
+        ![final project](framework/img/workshop/hustle-final-project.png) <!-- .element: class="screenshot" -->
 
         <div class="labels">
 
         header <!-- .element: class="header" -->
 
-        about <!-- .element: class="about" -->
+        problem <!-- .element: class="about" -->
 
-        loves <!-- .element: class="loves" -->
+        research <!-- .element: class="loves" -->
+
+        solution
 
         footer <!-- .element: class="footer" -->
         </div>
@@ -1260,50 +1253,15 @@ selector { /* select the link */
         <h2 style="margin-top:0;">This is an h2</h2>
     </section>
 
-    <section class="slide" data-markdown>
+
+    <section class="slide" data-markdown data-toc>
       <script type="text/template">
-        #Referencing CSS
+        #Where do we put CSS?
 
-        Today, we&#39;ll be creating a separate style sheet file for the CSS.  To create a stylesheet, just name the file with a `.css` file extension.
+        Open up the  ```style.css``` file in the same folder as your ``index.html`` file. Glitch already connects these two files together for us!
 
-        The style sheet is then referenced within the `<head>` of the HTML document (different tag from `<header>`).
+        ![Upload](framework/img/workshop/stylelink.png)
 
-        Use `<link>` tag and two *attributes*, `rel` and `href`.
-
-        ```
-        <head>
-          <title>Page Title</title>
-          <link rel="stylesheet" href="css/style.css">
-        </head>
-        ```
-
-        Though not required, css files are often saved in a separate folder for organization, just like images. <!-- .element: class="note" -->
-
-        ---
-        ###Resource
-        There are several ways to add CSS. Read more about the difference ways to reference CSS <!-- .element: class="footnote" -->[here](http://reference.sitepoint.com/css/linkingcss).
-      </script>
-    </section>
-
-    <section class="slide" data-markdown>
-      <script type="text/template">
-        #Class Exercise: Create your project's CSS File
-
-        1. In the text editor, create a new CSS file by selecting **File > New File**.
-        1. Name it **styles.css** and save it to the **css** folder (already included in your **project** folder).
-        <span class="note">You can name the file anything but it's best to choose a name that describes the file content.<br> (i.e. styles.css, global.css, custom.css, project-name.css, etc)</span>
-        1. Then, reference it in **index.html**. <span class="note">**Pro tip!** Type `link` and press tab!</span>
-          ```
-          <head>
-              <link rel="stylesheet" href="css/styles.css">
-          </head>
-          ```
-        1. Run a test by adding a background color to the viewport (`body`).
-          ```
-          body {
-            background: lightblue;
-          }
-          ```
       </script>
     </section>
 
@@ -2456,60 +2414,10 @@ border: 15px solid green;</textarea>
       </script>
     </section>
 
-    <section class="slide title" data-markdown data-toc>
-      <script type="text/template">
-        #Bonus Exercise: <br>Get your site online!
-        ##or skip ahead to <a href="#next-steps">next steps</a>
-      </script>
-    </section>
-    <section class="slide small-type" data-markdown>
-
-    <script type="text/template">
-    #Getting your story, quiz or game online
-
-    ##1) Create a Glitch Account
-
-    Go to https://glitch.com and sign in with email. You will need to go to your inbox and click on the "sign in" button to begin.
-
-    ![Sign in with email](framework/img/workshop/glitch-signin-with-email.png)
-    ![Verification email](framework/img/workshop/glitch-verification.png)
-
-    </script>
-  </section>
 
   <section class="slide small-type" data-markdown>
     <script type="text/template">
     #Getting your story, quiz or game online
-
-    ##2) Upload your files
-
-    * Create a new project <br> ![Select New Project, then Hello-Webpage](framework/img/workshop/new-project.png)
-    * Upload any HTML and CSS files (you'll have to upload one at a time) <br> ![Select New File, then Upload](framework/img/workshop/glitch-upload-file.png)
-    * Upload any images (you can select all at once)<br> ![Select assets, Add asset, the Upload](framework/img/workshop/glitch-upload-assets.png)
-
-    </script>
-  </section>
-
-  <section class="slide small-type" data-markdown>
-    <script type="text/template">
-    #Getting your story, quiz or game online
-
-    ##3) Fix broken links
-
-    * Rename your starting page as `index.html` so Glitch knows where to begin <br> ![Select start.html and rename as index.html](framework/img/workshop/glitch-rename-index.png)
-    * Update any links to the start page to redirect to `index.html`
-    * Under `assets`, selecy Copy and update any image links with this new URL<br> ![Select assets, then the image you are using, then select Copy](framework/img/workshop/copy-url.png)
-
-    **Test and debug your project by selecting `Show Live`.**
-
-    </script>
-  </section>
-
-  <section class="slide small-type" data-markdown>
-    <script type="text/template">
-    #Getting your story, quiz or game online
-
-    ##4) Share!
 
     * Rename your project to customize your URL <br> ![Rename your project in the top, left corner](framework/img/workshop/rename.png)
     * Click `Show Live`. This URL is the link you can share with others to direct them to your project! <br> ![Select Show Live to preview your project in a new tab](framework/img/workshop/share.png)
